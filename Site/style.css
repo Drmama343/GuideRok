@@ -1,33 +1,43 @@
 /* style.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
     color: #333;
+    display: flex;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
     background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid #e0e0e0;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
     position: fixed;
-    width: 100%;
+    height: 100%;
+    width: 200px;
+    right: 0;
     top: 0;
-    left: 0;
-    z-index: 1000;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    width: 100%;
 }
 
 .navbar li {
-    margin: 0 15px;
+    width: 100%;
 }
 
 .navbar a {
@@ -35,6 +45,7 @@ body {
     color: #333;
     padding: 15px 20px;
     display: block;
+    text-align: center;
 }
 
 .navbar a:hover {
@@ -43,14 +54,165 @@ body {
 }
 
 .content {
-    padding: 80px 20px 20px;
-    max-width: 800px;
-    margin: auto;
+    padding: 20px;
+    margin: 20px 150px 20px 10px; /* Add margin to make space for the sidebar */
+    width: 100%;
+    height: 100%; /* Ensure the content takes full height */
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
+.set {
+    margin: 125px 50px 0px 150px;
+}
+
 h1 {
     color: #00796b;
+}
+
+.set img {
+    position: relative;
+    cursor: pointer;
+}
+
+.Helmet {
+    top: 0;
+    left: 50px;
+}
+
+.Chestplate {
+    top: 155px;
+    left: -105px;
+}
+
+.Gloves {
+    top: 235px;
+    left: -175px;
+}
+
+.Weapon {
+    top: 235px;
+    left: -501px;
+}
+
+.Legs {
+    top: 315px;
+    left: -572px;
+}
+
+.Accessories1 {
+    top: 390px;
+    left: -636px;
+}
+
+.Accessories2 {
+    top: 390px;
+    left: -973px;
+}
+
+.Boots {
+    top: 467px;
+    left: -1038px;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Popup content */
+.popup-content {
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 300px; /* Set a maximum height for the popup */
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+.popup-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-content ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.popup-content ul li img {
+    margin-right: 10px;
+    width : 50px;
+    height : 50px;
+}
+
+.popup-content ul li:last-child {
+    border-bottom: none;
+}
+
+/* Style for scrollbar for WebKit browsers */
+.popup-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* Style for scrollbar for Firefox */
+.popup-content {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #FFF;
+}
+
+.button {
+    background-color: #00796b;
+    border: 1px solid black;
+    border-radius: 45px;
+    width: fit-content;
+    height: fit-content;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+.btn-compare {
+    position: absolute;
+    bottom: 40px;
+    right: 250px;
+}
+
+.btn-compare a{
+    font-size: large;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 20px;
 }
